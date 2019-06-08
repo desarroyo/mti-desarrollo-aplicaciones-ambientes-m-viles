@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnOlvidePass: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +24,24 @@ class ViewController: UIViewController {
         
     }
 
-
-    @IBAction func onLogin(_ sender: Any) {
+    @IBAction func onOlvidePass(_ sender: Any) {
+        let alert = UIAlertController(title: "Olvide Contraseña", message: "Llamale a tu máma", preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+        
+        
+        alert.addAction(UIAlertAction(title: "Dame el Password", style: .default, handler: {(action) in
+            print("Password Denegado")
+        }
+        ))
+        
+        
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func onLogin(_ sender: Any) {
+    
         var isLogin:Bool = false;
         var email:String = txtEmail.text ?? "";
         var password:String = txtPassword.text ?? "";

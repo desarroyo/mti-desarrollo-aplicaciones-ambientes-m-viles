@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="34" id="do4-gX-mxd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XP2-1P-VIL">
                                 <rect key="frame" x="91" y="156" width="192" height="33"/>
@@ -64,6 +64,16 @@
                                     <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wsp-Cc-bb1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoE-45-SJj">
+                                <rect key="frame" x="115" y="364" width="145" height="30"/>
+                                <state key="normal" title="Olvide mi contraseña">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onOlvidePass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zt1-Im-v4E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17634832774173015" green="0.54723600363685632" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -84,14 +94,17 @@
                             <constraint firstItem="sju-oD-0LI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oE2-kX-F3Z"/>
                             <constraint firstItem="XP2-1P-VIL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="pQL-Rc-yow"/>
                             <constraint firstItem="JWG-le-5MD" firstAttribute="leading" secondItem="Rb3-pD-uxC" secondAttribute="leading" id="uVU-Eq-hjo"/>
+                            <constraint firstItem="PoE-45-SJj" firstAttribute="top" secondItem="3Of-dX-xfd" secondAttribute="bottom" constant="8" symbolic="YES" id="vST-ZW-ez1"/>
                             <constraint firstItem="3hq-G1-RUf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vVA-tO-qMu"/>
                             <constraint firstItem="JWG-le-5MD" firstAttribute="centerX" secondItem="XP2-1P-VIL" secondAttribute="centerX" id="vcs-qq-U2v"/>
                             <constraint firstItem="sju-oD-0LI" firstAttribute="centerX" secondItem="JWG-le-5MD" secondAttribute="centerX" id="vgx-aB-2Qs"/>
+                            <constraint firstItem="PoE-45-SJj" firstAttribute="centerX" secondItem="3Of-dX-xfd" secondAttribute="centerX" id="x9w-ut-F2n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="btnLogin" destination="3Of-dX-xfd" id="cQC-tB-1LU"/>
+                        <outlet property="btnOlvidePass" destination="PoE-45-SJj" id="NcO-b7-5Z4"/>
                         <outlet property="txtEmail" destination="JWG-le-5MD" id="L2v-jB-5Kt"/>
                         <outlet property="txtPassword" destination="Rb3-pD-uxC" id="Exb-D3-fYc"/>
                     </connections>
@@ -117,7 +130,7 @@
                                     <constraint firstAttribute="height" constant="141" id="EPe-1N-yhd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="correo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVp-sk-7H9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVp-sk-7H9">
                                 <rect key="frame" x="91" y="614" width="193" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="lSA-wp-32O"/>
