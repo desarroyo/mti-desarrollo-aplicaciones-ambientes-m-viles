@@ -100,6 +100,68 @@
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="UDz-he-TgS">
+            <objects>
+                <viewController storyboardIdentifier="home" id="xB0-7P-fQU" customClass="HomeViewController" customModule="sesion_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0lQ-ii-fQ1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="at_back" translatesAutoresizingMaskIntoConstraints="NO" id="Xgy-Op-PoR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="X88-0X-9pK">
+                                <rect key="frame" x="67" y="34" width="241" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="EPe-1N-yhd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="correo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVp-sk-7H9">
+                                <rect key="frame" x="91" y="614" width="193" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="lSA-wp-32O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7F-hr-qkh">
+                                <rect key="frame" x="91" y="327" width="193" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="NkL-5g-SKN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1763483277" green="0.54723600360000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xgy-Op-PoR" secondAttribute="trailing" id="DbH-AF-SRB"/>
+                            <constraint firstItem="Xgy-Op-PoR" firstAttribute="centerY" secondItem="C7F-hr-qkh" secondAttribute="centerY" id="NmZ-yM-bQq"/>
+                            <constraint firstItem="C7F-hr-qkh" firstAttribute="leading" secondItem="Tvo-8h-LR6" secondAttribute="leading" constant="91" id="Rlb-pE-wOD"/>
+                            <constraint firstItem="Xgy-Op-PoR" firstAttribute="leading" secondItem="0lQ-ii-fQ1" secondAttribute="leading" id="Y5i-2u-1y1"/>
+                            <constraint firstItem="C7F-hr-qkh" firstAttribute="trailing" secondItem="SVp-sk-7H9" secondAttribute="trailing" id="aWj-7F-aQU"/>
+                            <constraint firstItem="Xgy-Op-PoR" firstAttribute="top" secondItem="Tvo-8h-LR6" secondAttribute="top" id="dNy-96-Snd"/>
+                            <constraint firstAttribute="bottom" secondItem="SVp-sk-7H9" secondAttribute="bottom" constant="20" symbolic="YES" id="jsG-Fg-95d"/>
+                            <constraint firstItem="C7F-hr-qkh" firstAttribute="leading" secondItem="SVp-sk-7H9" secondAttribute="leading" id="nGd-EW-CXL"/>
+                            <constraint firstItem="Xgy-Op-PoR" firstAttribute="bottom" secondItem="Tvo-8h-LR6" secondAttribute="bottom" id="ncX-oA-uNv"/>
+                            <constraint firstItem="X88-0X-9pK" firstAttribute="centerX" secondItem="C7F-hr-qkh" secondAttribute="centerX" id="oET-yv-Y9M"/>
+                            <constraint firstItem="X88-0X-9pK" firstAttribute="leading" secondItem="Tvo-8h-LR6" secondAttribute="leading" constant="67" id="pq6-q3-i24"/>
+                            <constraint firstItem="Xgy-Op-PoR" firstAttribute="centerX" secondItem="SVp-sk-7H9" secondAttribute="centerX" id="vU8-3I-oDz"/>
+                            <constraint firstItem="X88-0X-9pK" firstAttribute="top" secondItem="Tvo-8h-LR6" secondAttribute="top" constant="14" id="xww-Kt-rTH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tvo-8h-LR6"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblNombre" destination="SVp-sk-7H9" id="XmS-xT-y03"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pt7-O7-nrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712.79999999999995" y="26.53673163418291"/>
+        </scene>
     </scenes>
     <resources>
         <image name="at_back" width="3248" height="2480"/>

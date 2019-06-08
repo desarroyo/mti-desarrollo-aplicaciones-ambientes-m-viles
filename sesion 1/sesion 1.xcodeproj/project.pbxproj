@@ -13,6 +13,7 @@
 		4606800822A979F60076BDC2 /* sesion_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4606800622A979F60076BDC2 /* sesion_1.xcdatamodeld */; };
 		4606800A22A979FA0076BDC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4606800922A979FA0076BDC2 /* Assets.xcassets */; };
 		4606800D22A979FA0076BDC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4606800B22A979FA0076BDC2 /* LaunchScreen.storyboard */; };
+		46B23B9A22AB19EF00ABCC86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B23B9922AB19EF00ABCC86 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4606800922A979FA0076BDC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4606800C22A979FA0076BDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4606800E22A979FA0076BDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46B23B9922AB19EF00ABCC86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				46067FFF22A979F60076BDC2 /* AppDelegate.swift */,
 				4606800122A979F60076BDC2 /* ViewController.swift */,
 				4606800322A979F60076BDC2 /* Main.storyboard */,
+				46B23B9922AB19EF00ABCC86 /* HomeViewController.swift */,
 				4606800922A979FA0076BDC2 /* Assets.xcassets */,
 				4606800B22A979FA0076BDC2 /* LaunchScreen.storyboard */,
 				4606800E22A979FA0076BDC2 /* Info.plist */,
@@ -141,6 +144,7 @@
 				4606800822A979F60076BDC2 /* sesion_1.xcdatamodeld in Sources */,
 				4606800222A979F60076BDC2 /* ViewController.swift in Sources */,
 				4606800022A979F60076BDC2 /* AppDelegate.swift in Sources */,
+				46B23B9A22AB19EF00ABCC86 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

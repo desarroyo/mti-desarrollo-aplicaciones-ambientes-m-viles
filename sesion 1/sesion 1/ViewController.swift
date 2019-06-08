@@ -25,6 +25,49 @@ class ViewController: UIViewController {
 
 
     @IBAction func onLogin(_ sender: Any) {
+        
+        var isLogin:Bool = false;
+        var email:String = txtEmail.text ?? "";
+        var password:String = txtPassword.text ?? "";
+        var mensaje:String = "";
+        
+        
+       
+        
+        if(email != "admin@gmail.com"){
+            mensaje = "El correo: '"+email+"' no está registrado."
+            isLogin = false;
+        }else if(password != "12345"){
+            mensaje = "La contraseña es incorrecta."
+            isLogin = false;
+        }else{
+            //mensaje = "Login Correcto."
+            isLogin = true;
+        }
+        
+        if(!isLogin){
+            let alert = UIAlertController(title: "Login", message: mensaje, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+        }
+        
+        if(isLogin){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let homeViewController = storyBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
+            
+            homeViewController.Usuario = "David Arroyo";
+            
+            UserDefaults.standard.set("Daniela Felix", forKey: "Nombre") //setObject
+
+            
+            self.present(homeViewController, animated: true, completion: nil)
+            
+        }
+ 
+        
     }
 }
 
