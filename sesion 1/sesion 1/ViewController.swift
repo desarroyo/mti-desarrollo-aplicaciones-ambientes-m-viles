@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnOlvidePass: UIButton!
     
+    let user = "aldo"
+    let pass = "mti"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,17 +46,16 @@ class ViewController: UIViewController {
     @IBAction func onLogin(_ sender: Any) {
     
         var isLogin:Bool = false;
-        var email:String = txtEmail.text ?? "";
-        var password:String = txtPassword.text ?? "";
+        let usuario:String = txtEmail.text ?? "";
+        let password:String = txtPassword.text ?? "";
         var mensaje:String = "";
         
-        
-       
-        
-        if(email != "admin@gmail.com"){
-            mensaje = "El correo: '"+email+"' no está registrado."
+        if(txtEmail.text!.isEmpty || txtPassword.text!.isEmpty){
+         mensaje = "Favor de completar los datos"
+        }else if(txtEmail.text! != user){
+            mensaje = "El usuario: '"+usuario+"' no está registrado."
             isLogin = false;
-        }else if(password != "12345"){
+        }else if(password != pass){
             mensaje = "La contraseña es incorrecta."
             isLogin = false;
         }else{
@@ -74,9 +76,9 @@ class ViewController: UIViewController {
             
             let homeViewController = storyBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
             
-            homeViewController.Usuario = "David Arroyo";
+            homeViewController.Usuario = user;
             
-            UserDefaults.standard.set("Daniela Felix", forKey: "Nombre") //setObject
+            UserDefaults.standard.set(user, forKey: "Nombre") //setObject
 
             
             self.present(homeViewController, animated: true, completion: nil)
