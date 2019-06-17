@@ -10,12 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+var users = [UserModel]()
+
 class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
 
 
     @IBOutlet weak var tableView: UITableView!
     
-    var users = [UserModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,6 +29,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         
 
     }
+    
     
     func loadUsers(){
         AF.request("https://jsonplaceholder.typicode.com/users").responseJSON { response in
@@ -40,7 +43,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
                 let json = JSON(data)
                 
                 for user in json{
-                    self.users.append(UserModel(object: user.1))
+                    users.append(UserModel(object: user.1))
                 }
                 
                 self.tableView.reloadData()
@@ -60,11 +63,41 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "usuario")
-        cell?.textLabel?.text = users[indexPath.row].username
+        cell?.textLabel?.text = users[indexPath.row].name
         cell?.detailTextLabel?.text = "\(users[indexPath.row].street!), \(users[indexPath.row].city!)"
         
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //getting the index path of selected row
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        /*
+        //getting the text of that cell
+        let currentItem = currentCell.textLabel!.text
+        
+        let alertController = UIAlertController(title: "Simplified iOS", message: "You Selected " + currentItem! , preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+        */
+        
+        
+        UserDefaults.standard.set(indexPath?.row ?? -1, forKey: "usuario") //setObject
+        UserDefaults.standard.synchronize()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let homeViewController = storyBoard.instantiateViewController(withIdentifier: "usuario") as! UsuarioViewController
+        
+        //UsuarioViewController.Usuario = users[currentCell;
+        
+        
+        self.present(homeViewController, animated: true, completion: nil)
+    }
+    
     
 
 

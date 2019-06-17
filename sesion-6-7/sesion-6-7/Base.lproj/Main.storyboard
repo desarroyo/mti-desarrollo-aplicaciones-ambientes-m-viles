@@ -70,17 +70,78 @@
         <!--Mapa-->
         <scene sceneID="GSA-QI-O7u">
             <objects>
-                <viewController title="Mapa" id="5g3-zZ-35D" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="usuario" title="Mapa" id="5g3-zZ-35D" customClass="UsuarioViewController" customModule="sesion_6_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dlG-Ji-u9E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKf-hl-ENy">
+                                <rect key="frame" x="144.5" y="20" width="86" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="usernam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsX-ao-ua8">
+                                <rect key="frame" x="152" y="56.5" width="71" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1i-Pz-0Bp">
+                                <rect key="frame" x="166.5" y="80.5" width="42.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ciudad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGL-Hs-BT7">
+                                <rect key="frame" x="160" y="108" width="55" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="peg-T1-Fvz">
+                                <rect key="frame" x="10" y="135" width="355" height="522"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bp-Jm-6sV">
+                                <rect key="frame" x="10" y="38" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onBack:" destination="5g3-zZ-35D" eventType="touchUpInside" id="n02-0d-6Bn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D1i-Pz-0Bp" firstAttribute="centerX" secondItem="dlG-Ji-u9E" secondAttribute="centerX" id="01b-r6-rIE"/>
+                            <constraint firstItem="WGL-Hs-BT7" firstAttribute="top" secondItem="D1i-Pz-0Bp" secondAttribute="bottom" constant="2" id="31W-04-FVq"/>
+                            <constraint firstItem="D1i-Pz-0Bp" firstAttribute="top" secondItem="WsX-ao-ua8" secondAttribute="bottom" constant="2" id="4N2-0m-Vta"/>
+                            <constraint firstItem="WGL-Hs-BT7" firstAttribute="centerX" secondItem="dlG-Ji-u9E" secondAttribute="centerX" id="6xT-Eb-uti"/>
+                            <constraint firstItem="WsX-ao-ua8" firstAttribute="top" secondItem="XKf-hl-ENy" secondAttribute="bottom" constant="5" id="8S5-bv-DEC"/>
+                            <constraint firstItem="xcR-rT-VOB" firstAttribute="trailing" secondItem="peg-T1-Fvz" secondAttribute="trailing" constant="10" id="8uL-YZ-fsA"/>
+                            <constraint firstItem="0bp-Jm-6sV" firstAttribute="top" secondItem="xcR-rT-VOB" secondAttribute="top" constant="18" id="EVw-iY-MG0"/>
+                            <constraint firstItem="peg-T1-Fvz" firstAttribute="leading" secondItem="xcR-rT-VOB" secondAttribute="leading" constant="10" id="ImT-kZ-3ab"/>
+                            <constraint firstItem="XKf-hl-ENy" firstAttribute="centerX" secondItem="dlG-Ji-u9E" secondAttribute="centerX" id="WVb-5P-c29"/>
+                            <constraint firstItem="peg-T1-Fvz" firstAttribute="top" secondItem="WGL-Hs-BT7" secondAttribute="bottom" constant="5" id="b59-cz-enC"/>
+                            <constraint firstItem="WsX-ao-ua8" firstAttribute="top" secondItem="XKf-hl-ENy" secondAttribute="bottom" constant="5" id="dPD-kk-DqU"/>
+                            <constraint firstItem="peg-T1-Fvz" firstAttribute="top" secondItem="WGL-Hs-BT7" secondAttribute="bottom" constant="5" id="dsw-L6-A9S"/>
+                            <constraint firstItem="XKf-hl-ENy" firstAttribute="top" secondItem="xcR-rT-VOB" secondAttribute="top" id="p9c-mO-lWf"/>
+                            <constraint firstItem="WsX-ao-ua8" firstAttribute="centerX" secondItem="dlG-Ji-u9E" secondAttribute="centerX" id="rXS-Gk-ajJ"/>
+                            <constraint firstItem="0bp-Jm-6sV" firstAttribute="leading" secondItem="xcR-rT-VOB" secondAttribute="leading" constant="10" id="vai-BD-vfe"/>
+                            <constraint firstItem="xcR-rT-VOB" firstAttribute="bottom" secondItem="peg-T1-Fvz" secondAttribute="bottom" constant="10" id="yAC-ft-fPq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xcR-rT-VOB"/>
                     </view>
+                    <connections>
+                        <outlet property="lblCalle" destination="D1i-Pz-0Bp" id="u8L-KO-XRu"/>
+                        <outlet property="lblNombre" destination="XKf-hl-ENy" id="ri8-A8-dAb"/>
+                        <outlet property="lblUsername" destination="WsX-ao-ua8" id="x0q-3C-Obg"/>
+                        <outlet property="llblCiudad" destination="WGL-Hs-BT7" id="jjY-kr-z5v"/>
+                        <outlet property="mapa" destination="peg-T1-Fvz" id="Fd8-9c-6LJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rW-r2-bFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702" y="-564"/>
+            <point key="canvasLocation" x="1701.5999999999999" y="-564.46776611694156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMK-qh-LKf">

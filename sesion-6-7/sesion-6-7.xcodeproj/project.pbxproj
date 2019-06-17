@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		469F1BE422B7F85700631339 /* UsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F1BE322B7F85700631339 /* UsuarioViewController.swift */; };
 		60B5F67622B47B8C008683CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B5F67522B47B8C008683CC /* AppDelegate.swift */; };
 		60B5F67822B47B8C008683CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B5F67722B47B8C008683CC /* ViewController.swift */; };
 		60B5F67B22B47B8C008683CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B5F67922B47B8C008683CC /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		0D3E47AAC9B1E856EE9B9322 /* Pods-sesion-6-7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesion-6-7.release.xcconfig"; path = "Target Support Files/Pods-sesion-6-7/Pods-sesion-6-7.release.xcconfig"; sourceTree = "<group>"; };
 		163A45F7C5AFA6AA22147BDC /* Pods-sesion-6-7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesion-6-7.debug.xcconfig"; path = "Target Support Files/Pods-sesion-6-7/Pods-sesion-6-7.debug.xcconfig"; sourceTree = "<group>"; };
+		469F1BE322B7F85700631339 /* UsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewController.swift; sourceTree = "<group>"; };
 		60B5F67222B47B8C008683CC /* sesion-6-7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sesion-6-7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B5F67522B47B8C008683CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60B5F67722B47B8C008683CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				60B5F68122B47B8E008683CC /* LaunchScreen.storyboard */,
 				60B5F68422B47B8E008683CC /* Info.plist */,
 				60B5F67C22B47B8C008683CC /* sesion_6_7.xcdatamodeld */,
+				469F1BE322B7F85700631339 /* UsuarioViewController.swift */,
 			);
 			path = "sesion-6-7";
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				60B5F67E22B47B8C008683CC /* sesion_6_7.xcdatamodeld in Sources */,
 				60B5F67822B47B8C008683CC /* ViewController.swift in Sources */,
+				469F1BE422B7F85700631339 /* UsuarioViewController.swift in Sources */,
 				60B5F68C22B48A5A008683CC /* UserModel.swift in Sources */,
 				60B5F67622B47B8C008683CC /* AppDelegate.swift in Sources */,
 			);
