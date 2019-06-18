@@ -33,7 +33,7 @@ final class UsuarioAnotation: NSObject, MKAnnotation{
 
 class UsuarioViewController: UIViewController {
 
-    var usuario:UserModel
+    //var usuario:UserModel
     
     @IBOutlet weak var lblNombre: UILabel!
     @IBOutlet weak var lblUsername: UILabel!    
@@ -45,7 +45,7 @@ class UsuarioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
         lblNombre.text = usuario.name
         
         lblCalle.text = usuario.street
@@ -59,14 +59,16 @@ class UsuarioViewController: UIViewController {
         
         mapa.addAnnotation(annot)
         mapa.setRegion(annot.region, animated: true)
+ */
 
     }
-    
+    /*
     required init?(coder aDecoder: NSCoder) {
         self.usuario = users[UserDefaults.standard.integer(forKey: "usuario")]
         super.init(coder: aDecoder)
 
     }
+ */
     
     @IBAction func onBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		469F1BE422B7F85700631339 /* UsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F1BE322B7F85700631339 /* UsuarioViewController.swift */; };
+		6038CB6422B8697B00795197 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038CB6322B8697B00795197 /* UserTableViewCell.swift */; };
+		6038CB6722B86F9B00795197 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6038CB6622B86F9B00795197 /* MapKit.framework */; };
+		6038CB6922B871E000795197 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038CB6822B871E000795197 /* MapaViewController.swift */; };
 		60B5F67622B47B8C008683CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B5F67522B47B8C008683CC /* AppDelegate.swift */; };
 		60B5F67822B47B8C008683CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B5F67722B47B8C008683CC /* ViewController.swift */; };
 		60B5F67B22B47B8C008683CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B5F67922B47B8C008683CC /* Main.storyboard */; };
@@ -21,7 +23,9 @@
 /* Begin PBXFileReference section */
 		0D3E47AAC9B1E856EE9B9322 /* Pods-sesion-6-7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesion-6-7.release.xcconfig"; path = "Target Support Files/Pods-sesion-6-7/Pods-sesion-6-7.release.xcconfig"; sourceTree = "<group>"; };
 		163A45F7C5AFA6AA22147BDC /* Pods-sesion-6-7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesion-6-7.debug.xcconfig"; path = "Target Support Files/Pods-sesion-6-7/Pods-sesion-6-7.debug.xcconfig"; sourceTree = "<group>"; };
-		469F1BE322B7F85700631339 /* UsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewController.swift; sourceTree = "<group>"; };
+		6038CB6322B8697B00795197 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		6038CB6622B86F9B00795197 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6038CB6822B871E000795197 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		60B5F67222B47B8C008683CC /* sesion-6-7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sesion-6-7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B5F67522B47B8C008683CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60B5F67722B47B8C008683CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6038CB6722B86F9B00795197 /* MapKit.framework in Frameworks */,
 				CB87B3BAEBE1C042A334F145 /* Pods_sesion_6_7.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6038CB6522B8699100795197 /* UIModels */ = {
+			isa = PBXGroup;
+			children = (
+				6038CB6322B8697B00795197 /* UserTableViewCell.swift */,
+			);
+			path = UIModels;
+			sourceTree = "<group>";
+		};
 		60B5F66922B47B8C008683CC = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +80,7 @@
 		60B5F67422B47B8C008683CC /* sesion-6-7 */ = {
 			isa = PBXGroup;
 			children = (
+				6038CB6522B8699100795197 /* UIModels */,
 				60B5F68A22B48A46008683CC /* Models */,
 				60B5F67522B47B8C008683CC /* AppDelegate.swift */,
 				60B5F67722B47B8C008683CC /* ViewController.swift */,
@@ -75,7 +89,7 @@
 				60B5F68122B47B8E008683CC /* LaunchScreen.storyboard */,
 				60B5F68422B47B8E008683CC /* Info.plist */,
 				60B5F67C22B47B8C008683CC /* sesion_6_7.xcdatamodeld */,
-				469F1BE322B7F85700631339 /* UsuarioViewController.swift */,
+				6038CB6822B871E000795197 /* MapaViewController.swift */,
 			);
 			path = "sesion-6-7";
 			sourceTree = "<group>";
@@ -100,6 +114,7 @@
 		94FF64C0242F78B5AB4EBCAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6038CB6622B86F9B00795197 /* MapKit.framework */,
 				EA27505AC62880F1A0AFC935 /* Pods_sesion_6_7.framework */,
 			);
 			name = Frameworks;
@@ -139,6 +154,11 @@
 				TargetAttributes = {
 					60B5F67122B47B8C008683CC = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -222,8 +242,9 @@
 			files = (
 				60B5F67E22B47B8C008683CC /* sesion_6_7.xcdatamodeld in Sources */,
 				60B5F67822B47B8C008683CC /* ViewController.swift in Sources */,
-				469F1BE422B7F85700631339 /* UsuarioViewController.swift in Sources */,
 				60B5F68C22B48A5A008683CC /* UserModel.swift in Sources */,
+				6038CB6922B871E000795197 /* MapaViewController.swift in Sources */,
+				6038CB6422B8697B00795197 /* UserTableViewCell.swift in Sources */,
 				60B5F67622B47B8C008683CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +399,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.desarroyo.sesion-6-7";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.desarroyo.sesion-5-6-7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,7 +418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.desarroyo.sesion-6-7";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.desarroyo.sesion-5-6-7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

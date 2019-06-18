@@ -10,13 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-var users = [UserModel]()
+
 
 class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
 
 
     @IBOutlet weak var tableView: UITableView!
-    
+    var users = [UserModel]()
+    var selectedUser: UserModel = UserModel(object: JSON())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     }
     
     
+    
     func loadUsers(){
         AF.request("https://jsonplaceholder.typicode.com/users").responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
@@ -43,7 +45,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
                 let json = JSON(data)
                 
                 for user in json{
-                    users.append(UserModel(object: user.1))
+                    self.users.append(UserModel(object: user.1))
                 }
                 
                 self.tableView.reloadData()
@@ -62,28 +64,27 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "usuario")
-        cell?.textLabel?.text = users[indexPath.row].name
-        cell?.detailTextLabel?.text = "\(users[indexPath.row].street!), \(users[indexPath.row].city!)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "usuario") as! UserTableViewCell
         
-        return cell!
+        cell.lblNombre.text = users[indexPath.row].name
+        cell.lblPhone.text = users[indexPath.row].phone
+        
+        //cell?.textLabel?.text = users[indexPath.row].name
+        //cell?.detailTextLabel?.text = "\(users[indexPath.row].street!), \(users[indexPath.row].city!)"
+        
+        return cell
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     //getting the index path of selected row
-        let indexPath = tableView.indexPathForSelectedRow
+        //let indexPath = tableView.indexPathForSelectedRow
         
+        
+        selectedUser = users[indexPath.row]
+        
+        performSegue(withIdentifier: "ubicacion", sender: self)
         /*
-        //getting the text of that cell
-        let currentItem = currentCell.textLabel!.text
-        
-        let alertController = UIAlertController(title: "Simplified iOS", message: "You Selected " + currentItem! , preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        present(alertController, animated: true, completion: nil)
-        */
-        
         
         UserDefaults.standard.set(indexPath?.row ?? -1, forKey: "usuario") //setObject
         UserDefaults.standard.synchronize()
@@ -96,6 +97,16 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         
         
         self.present(homeViewController, animated: true, completion: nil)
+ 
+        */
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ubicacion"{
+            let vc = segue.destination as! MapaViewController;
+            vc.user = selectedUser
+            
+        }
     }
     
     

@@ -13,6 +13,7 @@ class UserModel{
     var id:Int?
     var name:String
     var username: String?
+    var phone: String?
     var street:String?
     var city:String?
     var lat:Double?
@@ -22,6 +23,7 @@ class UserModel{
         id = object["id"].int
         name = object["name"].stringValue
         username = object["username"].stringValue
+        phone = object["phone"].stringValue
         street = object["address"]["street"].stringValue
         city = object["address"]["city"].stringValue
         lat = object["address"]["geo"]["lat"].doubleValue
