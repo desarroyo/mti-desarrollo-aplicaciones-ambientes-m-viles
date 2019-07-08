@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class TomarFotoViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     let captureSession = AVCaptureSession()
     var previewLayer:CALayer!
@@ -73,57 +73,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.view.layer.addSublayer(self.previewLayer)
         self.previewLayer.frame = self.view.layer.frame
         
-        /*
-        let cuadroBack = CAShapeLayer()
-        cuadroBack.path =  UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight), cornerRadius: 10).cgPath
-        
-        cuadroBack.position = CGPoint(x: 0, y: 0)
-        cuadroBack.fillColor = UIColor.blue.withAlphaComponent(0.70).cgColor
-        
-        let pathMutable = CGMutablePath()
-        pathMutable.addPath(cuadroBack)
-        //view.layer.insertSublayer(cuadroBack, above: self.view.layer)
-        
-        
-        let cuadroFront = CAShapeLayer()
-        cuadroFront.path =  UIBezierPath(roundedRect: CGRect(x: 50, y: 100, width: (screenWidth - 100), height: (screenHeight - 400)), cornerRadius: 10).cgPath
-        
-        cuadroFront.position = CGPoint(x: 0, y: 0)
-        cuadroFront.fillColor = UIColor.green.withAlphaComponent(0.50).cgColor
-        
-        pathMutable.addPath(cuadroFront)
-        
-        cuadroBack.fillRule = CAShapeLayerFillRule.evenOdd
-        
-        view.layer.insertSublayer(cuadroFront, above: self.view.layer)
-        */
-        
-        let width: CGFloat = 640
-        let height: CGFloat = 640
-        
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.frame = CGRect(x: -100, y: 0,
-                                  width: width, height: height)
-        
-        let path = CGMutablePath()
-        
-        stride(from: 0, to: CGFloat.pi * 2, by: CGFloat.pi / 6).forEach {
-            angle in
-            var transform  = CGAffineTransform(rotationAngle: angle)
-                .concatenating(CGAffineTransform(translationX: width / 2, y: height / 2))
-            
-            let petal = CGPath(ellipseIn: CGRect(x: -20, y: 0, width: 40, height: 100),
-                               transform: &transform)
-            
-            path.addPath(petal)
-        }
-        
-        shapeLayer.path = path
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.fillColor = UIColor.yellow.cgColor
-        shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
-        
-        view.layer.insertSublayer(shapeLayer, above: self.view.layer)
+       
         
         
         captureSession.startRunning()
